@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import {setAlert} from '../actions/alerts';
-import {connect} from 'react-redux';
-import {register} from '../actions/user';
 import {Redirect} from 'react-router-dom';
 
-const Register = ({setAlert, register, user}) => {
+const Apply = ({setAlert, register, user}) => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -60,7 +57,7 @@ const Register = ({setAlert, register, user}) => {
         <div className="centering spacing">
             <div className="w-60">
                 <p className="f1 fw7 color-green  mv0">
-                    Register
+                    Apply
                 </p>
                 <Form onSubmit={onSubmit}>
                     <Form.Group controlId="formBasicName">
@@ -78,16 +75,6 @@ const Register = ({setAlert, register, user}) => {
                         <Form.Control name="email" type="email" placeholder="What's your email?" defaultValue={email} onChange={onChange} />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control name="password" type="password" placeholder="What's your password?" defaultValue={password} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicConfirmPassword">
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control name="passwordConfirm" type="password" placeholder="Confirm your password" defaultValue={passwordConfirm} onChange={onChange} />
-                    </Form.Group>
-
                     <Button variant="success" type="submit">
                         Submit
                     </Button>
@@ -97,13 +84,9 @@ const Register = ({setAlert, register, user}) => {
     )
 }
 
-Register.propTypes = {
+Apply.propTypes = {
     setAlert: PropTypes.func.isRequired,
     register: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state) => ({
-    user: state.user.user
-}); 
-
-export default connect(mapStateToProps, {setAlert, register})(Register)
+export default Apply

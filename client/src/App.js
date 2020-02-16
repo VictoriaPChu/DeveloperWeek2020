@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import Navigation from './components/Navigation';
-import Register from './components/Register'; 
-import Login from './components/Login'; 
-import ProcessText from './components/ProcessText'; 
+import Apply from './components/Apply'; 
+import Tools from './components/Tools'; 
+import About from './components/About'
 import Landing from './components/Landing';
 import Alerts from './components/Alerts';
-import Contacts from './components/Contacts';
 
 function App() {
   return (
@@ -20,10 +19,9 @@ function App() {
             <Route component={Alerts} />
             <Route exact path="/" component={Landing} />
               <Switch>
-                <Route exact path="/register" component={Register} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/processtext" component={ProcessText} />
-                <Route exact path="/contacts" component={Contacts}/>
+                <Route exact path="/about" component={About}/>
+                <Route exact path="/tools" component= {Tools}/>
+                <Route exact path="/apply" component={Apply} />
               </Switch>
           </Fragment>
         </Router>

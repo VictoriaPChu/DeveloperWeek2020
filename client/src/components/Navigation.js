@@ -37,17 +37,28 @@ const Navigation = ({logout, user, history}) => {
         }
 
         return <Fragment>
-            <Nav.Link href="/register" className="text-white">
+            <Nav.Link href="/about" className="text-white">
                 <span className="green-hover">
-                    Register
+                    About
                 </span>
             </Nav.Link>
-            <Nav.Link href="/login" className="text-white">
+            <Nav.Link href="/guidelines" className="text-white">
                 <span className="green-hover">
-                    Log In
+                    Guidelines
                 </span>
             </Nav.Link>
-        </Fragment>
+            <Nav.Link href="/navigation" className="text-white">
+                <span className="green-hover">
+                    Navigation
+                </span>
+            </Nav.Link>
+            <Nav.Link href="/apply" className="text-white">
+                <span className="green-hover">
+                    Apply
+                </span>
+            </Nav.Link>
+
+     </Fragment>
     }
 
     return (
