@@ -72,13 +72,13 @@ const Apply = ({setAlert, register, user}) => {
                         <Form.Control name="email" type="email" placeholder="What's your email?" defaultValue={email} onChange={onChange} />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="">
                         <Form.Label>Link:</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="Please provide a link to your article." defaultValue={email} onChange={onChange} />
+                        <Form.Control name="" type="" placeholder="Please provide a link to your article." onChange={onChange} />
                     </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="">
                         <Form.Label>How would you classify this article? (recent events, informational, opinion)</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="Please respond with one of the aforementioned options." defaultValue={email} onChange={onChange} />
+                        <Form.Control name="" type="" placeholder="Please respond with one of the aforementioned options." onChange={onChange} />
                     </Form.Group>
 
                     <Button variant="primary" size="lg" className="mh3 grow" href="/processing">
