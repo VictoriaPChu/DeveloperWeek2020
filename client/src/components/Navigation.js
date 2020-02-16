@@ -50,7 +50,7 @@ const Navigation = ({logout, user, history}) => {
             <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
                 <Navbar.Brand className="f3 fw7 ml4" href="/">
                     <span className="green-hover">
-                        <i className="fas fa-check"></i>  Fair News Certified
+                          Fair News Certified
                     </span>
                 </Navbar.Brand>
                 <Nav className="ml-auto mr4">

@@ -4,54 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {Redirect} from 'react-router-dom';
 
-const About = ({setAlert, register, user}) => {
+const Tools = ({setAlert, register, user}) => {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        password: '',
-        passwordConfirm: ''
-    });
-    const { name, email, phone, password, passwordConfirm } = formData;
 
-    // only accept numbers as input for the user's phone number
-    const fitPhoneNum = phoneNum => {
-        let newPhoneNum = '';
-        for (let i = 0; i < Math.min(phoneNum.length, 12); i++) {
-            if (i === 3 || i === 7) {
-                newPhoneNum += ' '; 
-            }
-            const code = phoneNum.charCodeAt(i);
-            if (code <= 57 && code >= 48) {
-                newPhoneNum += phoneNum.charAt(i);
-            }
-        }
-        return newPhoneNum;
-    }
-
-    const onChange = e => {
-        if (e.target.name === 'phone') {
-            e.target.value = fitPhoneNum(e.target.value);
-        }
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-        
-        if (name === '' || email === '' || password === '' || passwordConfirm === '') {
-            setAlert('Please provide complete registration information', 'danger')
-        } else if (password !== passwordConfirm) {
-            setAlert('Please provide matching passwords', 'danger')
-        } else {
-            register({name, phone, email, password});
-        }
-    }
-
-    if (user) {
-        return <Redirect to="/processtext"/>
-    }
 
     return (
         <div className="centering spacing">
@@ -62,24 +17,36 @@ const About = ({setAlert, register, user}) => {
                 <p className="f3 fw3 color-black mv0">
                 Data Visualizer
                 </p>
+                <p className="f3 fw3 color-black mv0">
+                A visualizer for data.
+                </p>
                 <p className="f1 fw7 color-green  mv0">
                 </p>
-                <p className="f3 fw3 color-black mv0">
+                <p className="f2 fw3 color-black mv0">
                 Conversation Visualizer
                 </p>
+                <p className="f3 fw3 color-black mv0">
+                A feature that keeps track of debates and conversation, and visualizes it.
+                </p>
                 <p className="f1 fw7 color-green  mv0">
                 </p>
-                <p className="f3 fw3 color-black mv0">
+                <p className="f2 fw3 color-black mv0">
                 Interview verification tool
                 </p>
+                <p className="f3 fw3 color-black mv0">
+                Using Yubikey, we authenticate interviewees and interviewers by their keys to ensure they are who they say they are. Then we send them over to our Agora based interview platform.
+                </p>
                 <p className="f1 fw7 color-green  mv0">
                 </p>
-                <p className="f3 fw3 color-black mv0">
+                <p className="f2 fw3 color-black mv0">
                 Photo verification tool
                 </p>
+                <p className="f3 fw3 color-black mv0">
+                Using the Canon API, we allow photographers to take pictures on the go, and immediately upload them to the cloud, to make sure they don't modify anything.
+                </p>
                 <p className="f1 fw7 color-green  mv0">
                 </p>
-                <p className="f3 fw3 color-black mv0">
+                <p className="f2 fw3 color-black mv0">
                 Fact checker
                 </p>
                 
@@ -88,9 +55,5 @@ const About = ({setAlert, register, user}) => {
     )
 }
 
-About.propTypes = {
-    setAlert: PropTypes.func.isRequired,
-    register: PropTypes.func.isRequired
-}
 
-export default About
+export default Tools

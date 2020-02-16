@@ -10,6 +10,10 @@ const Landing = props => {
                     <p className="f3 fw5">
                         Encouraging Quality News in an Unregulated Market
                     </p>
+                    <Button variant="primary" size="lg" className="mh3 grow" href="/news">
+                            See our approved articles
+                    </Button>
+    
                     <div>
                     </div>
                 </div>

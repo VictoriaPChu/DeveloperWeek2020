@@ -9,7 +9,8 @@ import Tools from './components/Tools';
 import About from './components/About'
 import Landing from './components/Landing';
 import Guidelines from './components/Guidelines';
-import Alerts from './components/Alerts';
+import Processing from './components/Processing';
+import News from './components/News';
 
 function App() {
   return (
@@ -17,13 +18,15 @@ function App() {
         <Router>
           <Fragment>
             <Route component={Navigation} />
-            <Route component={Alerts} />
             <Route exact path="/" component={Landing} />
               <Switch>
                 <Route exact path="/about" component={About}/>
                 <Route exact path="/tools" component= {Tools}/>
                 <Route exact path="/guidelines" component= {Guidelines}/>
                 <Route exact path="/apply" component={Apply}/>
+                <Route exact path="/processing" component={Processing}/>
+                <Route exact path="/news" component={News}/>
+
               </Switch>
           </Fragment>
         </Router>
