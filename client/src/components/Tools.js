@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {Redirect} from 'react-router-dom';
 
-const Tools = ({setAlert, register, user}) => {
+const About = ({setAlert, register, user}) => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -57,46 +57,40 @@ const Tools = ({setAlert, register, user}) => {
         <div className="centering spacing">
             <div className="w-60">
                 <p className="f1 fw7 color-green  mv0">
-                    Register
+                Tools
                 </p>
-                <Form onSubmit={onSubmit}>
-                    <Form.Group controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control name="name" type="text" placeholder="What's your name?" defaultValue={name} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPhone">
-                        <Form.Label>Phone Number</Form.Label>
-                        <Form.Control name="phone" type="text" placeholder="What's your phone number?" defaultValue={phone} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email Address</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="What's your email?" defaultValue={email} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control name="password" type="password" placeholder="What's your password?" defaultValue={password} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicConfirmPassword">
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control name="passwordConfirm" type="password" placeholder="Confirm your password" defaultValue={passwordConfirm} onChange={onChange} />
-                    </Form.Group>
-
-                    <Button variant="success" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                <p className="f3 fw3 color-black mv0">
+                Data Visualizer
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Conversation Visualizer
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Interview verification tool
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Photo verification tool
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Fact checker
+                </p>
+                
             </div>
         </div>
     )
 }
 
-Tools.propTypes = {
+About.propTypes = {
     setAlert: PropTypes.func.isRequired,
     register: PropTypes.func.isRequired
 }
 
-export default Tools
+export default About

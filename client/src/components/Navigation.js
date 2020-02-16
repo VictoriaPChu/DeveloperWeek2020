@@ -9,22 +9,6 @@ const Navigation = ({logout, user, history}) => {
     const showLinks = () => {
         if (user) {
             return <Fragment>
-                <Nav.Link href="/contacts" className="text-white" onClick={e => {
-                    e.preventDefault();
-                    history.push('/contacts');
-                }}>
-                    <span className="green-hover">
-                        My Contacts
-                    </span>
-                </Nav.Link>
-                <Nav.Link href="/processtext" className="text-white" onClick={e => {
-                    e.preventDefault();
-                    history.push('/processtext'); 
-                }}>
-                    <span className="green-hover">
-                        Process Text
-                    </span>
-                </Nav.Link>
                 <Nav.Link href="/" className="text-white" onClick={e => {
                     e.preventDefault();
                     logout();
@@ -47,9 +31,9 @@ const Navigation = ({logout, user, history}) => {
                     Guidelines
                 </span>
             </Nav.Link>
-            <Nav.Link href="/navigation" className="text-white">
+            <Nav.Link href="/Tools" className="text-white">
                 <span className="green-hover">
-                    Navigation
+                    Tools
                 </span>
             </Nav.Link>
             <Nav.Link href="/apply" className="text-white">

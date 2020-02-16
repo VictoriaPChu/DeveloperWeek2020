@@ -8,6 +8,7 @@ import Apply from './components/Apply';
 import Tools from './components/Tools'; 
 import About from './components/About'
 import Landing from './components/Landing';
+import Guidelines from './components/Guidelines';
 import Alerts from './components/Alerts';
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
               <Switch>
                 <Route exact path="/about" component={About}/>
                 <Route exact path="/tools" component= {Tools}/>
-                <Route exact path="/apply" component={Apply} />
+                <Route exact path="/guidelines" component= {Guidelines}/>
+                <Route exact path="/apply" component={Apply}/>
               </Switch>
           </Fragment>
         </Router>

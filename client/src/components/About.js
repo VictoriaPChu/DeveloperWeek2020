@@ -57,11 +57,36 @@ const About = ({setAlert, register, user}) => {
         <div className="centering spacing">
             <div className="w-60">
                 <p className="f1 fw7 color-green  mv0">
-                    About
+                What do we do?
                 </p>
-                <p className="f2 fw3 color-black mv0">
-                    About
+                <p className="f3 fw3 color-black mv0">
+                We establish and enforce standards for fair reporting with our brand. We hope to create some fair guidelines for newsreporting services to follow.
                 </p>
+                <p className="f1 fw7 color-green  mv0">
+                What is fair reporting to us?
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Use and cite sources, make claims using well tested statistics, and 
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                What services do you provide?
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                One of the biggest reasons why news is unregulated is that we don’t have the tools for fair reporting. So we seek to provide tools for verifiying sources, verifying studies, verifying photos/videos, news analytical tools, news comparison tools, conversation moderators, etc.                
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                What is our brand?
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                When an article is branded with our brand it means they have followed the guidelines we have in place.
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                Who should use our brand?
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                We seek to empower independent journalists and quality reporters. We help them gain trust if they have followed our guidelines.
+                </p>
+                
             </div>
         </div>
     )

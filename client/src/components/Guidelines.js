@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {Redirect} from 'react-router-dom';
 
-const Apply = ({setAlert, register, user}) => {
+const Guidelines = ({setAlert, register, user}) => {
 
     const [formData, setFormData] = useState({
         name: '',
@@ -57,46 +57,34 @@ const Apply = ({setAlert, register, user}) => {
         <div className="centering spacing">
             <div className="w-60">
                 <p className="f1 fw7 color-green  mv0">
-                    Register
+                Cite your sources
                 </p>
-                <Form onSubmit={onSubmit}>
-                    <Form.Group controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control name="name" type="text" placeholder="What's your name?" defaultValue={name} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPhone">
-                        <Form.Label>Phone Number</Form.Label>
-                        <Form.Control name="phone" type="text" placeholder="What's your phone number?" defaultValue={phone} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email Address</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="What's your email?" defaultValue={email} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control name="password" type="password" placeholder="What's your password?" defaultValue={password} onChange={onChange} />
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicConfirmPassword">
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control name="passwordConfirm" type="password" placeholder="Confirm your password" defaultValue={passwordConfirm} onChange={onChange} />
-                    </Form.Group>
-
-                    <Button variant="success" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                <p className="f3 fw3 color-black mv0">
+                The more sources the better!
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                Use credible studies
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Make sure they follow the scientific method and are reasonably recent.
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                Use our tools to create your article!
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Using our tools, we can help prevent modification of photos and news.
+                </p>
+                <p className="f1 fw7 color-green  mv0">
+                How do you get certified with our brand?
+                </p>
+                <p className="f3 fw3 color-black mv0">
+                Provide us with proof that you followed most of the guidelines above.
+                </p>
+                
             </div>
         </div>
     )
 }
 
-Apply.propTypes = {
-    setAlert: PropTypes.func.isRequired,
-    register: PropTypes.func.isRequired
-}
 
-export default Apply
+export default Guidelines
